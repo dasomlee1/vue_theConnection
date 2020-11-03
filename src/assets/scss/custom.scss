@@ -1,0 +1,43 @@
+//common
+hr {
+  margin: 0;
+}
+
+.theme--light.v-application {
+  background-color: #efefef;
+}
+
+//HeaderLayout
+.v-toolbar {
+  &.header {
+    position: relative;
+    z-index: 1;
+    flex: unset !important;
+  }
+}
+
+//ConnectionsListCard
+.card-btn {
+  padding: 0;
+
+  .theme--light.v-btn:not(.v-btn--flat):not(.v-btn--text):not(.v-btn--outlined) {
+    background-color: transparent;
+  }
+
+  .v-btn--contained {
+    box-shadow: unset;
+  }
+
+  .v-btn:not(.v-btn--round).v-size--default {
+    min-width: unset;
+  }
+
+  .v-btn > .v-btn__content .v-icon {
+    font-size: 18px;
+  }
+}
+
+.card-list {
+
+}
+
