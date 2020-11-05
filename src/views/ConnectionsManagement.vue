@@ -21,6 +21,7 @@
 
                 <v-card-actions class="pa-3 pt-0">
                     <v-btn
+                            @click="pageMove()"
                             outlined
                             text
                             style="width: 49%"
@@ -46,6 +47,11 @@
     export default {
         components: {
             ConnectionsListCard
+        },
+        methods: {
+            pageMove() {
+                this.$router.push({name: 'InformationForm'})
+            }
         },
         data: () => ({
             connectionsList: [

@@ -1,7 +1,7 @@
 <template>
     <div class="d-flex flex-wrap">
         <v-card class="card-list mt-5 mr-5"
-                style="width: 30%"
+                style="width: 30%; min-width: 250px;"
                 outlinedv
                 v-for="(item, index) in connectionsList" :key="index"
         >
@@ -49,7 +49,7 @@
         },
         methods: {
             pageMove() {
-                this.$router.push({name: 'Home'})
+                this.$router.push({name: 'ShareConnections'})
             }
         }
     }

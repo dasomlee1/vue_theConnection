@@ -36,8 +36,25 @@ hr {
     font-size: 18px;
   }
 }
+.share-connections{
+  .card-list {
+    cursor: pointer;
+  }
+}
 
-.card-list {
+//informationForm
+.input-area{
+  position: relative;
+  .btn-input{
+    position: absolute;
+    right: 2%;
+    top: 13%;
+  }
+}
 
+.hash{
+  .v-text-field__details{
+   display: none;
+  }
 }
 

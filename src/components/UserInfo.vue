@@ -16,7 +16,9 @@
                     class="pr-1"
                     justify="end"
             >
-                <v-icon class="far fa-envelope"></v-icon>
+                <router-link :to="{name:'ShareConnections'}">
+                    <v-icon class="far fa-envelope"></v-icon>
+                </router-link>
             </v-row>
         </v-list-item>
 
@@ -44,6 +46,9 @@
 
 <script>
     export default {
+        components: {
+
+        },
         methods: {
             pageMove(){
                 this.$router.push({name : 'ConnectionsManagement'})
