@@ -1,22 +1,28 @@
 <template>
-    <v-app>
-        <HeaderLayout/>
-        <v-main>
-            <v-container>
-                <v-row>
-                    <v-col cols="3" style="max-width: 380px">
-                        <UserInfo/>
-                        <UserCategory/>
-                        <!--            <router-link :to="{name :'Home'}">Home</router-link>-->
-                        <!--            <router-link :to="{name :'ConnectionsManagement'}">ConnectionsManagement</router-link>-->
-                    </v-col>
-                    <v-col cols="9">
-                        <router-view/>
-                    </v-col>
-                </v-row>
-            </v-container>
-        </v-main>
-    </v-app>
+    <div>
+        <v-app>
+            <v-main v-if="(currentRouteName === 'SignUp') || (currentRouteName === 'SignIn')">
+                <router-view/>
+            </v-main>
+
+            <v-main v-else>
+                <HeaderLayout/>
+                <v-container>
+                    <v-row>
+                        <v-col cols="3" style="max-width: 380px">
+                            <UserInfo/>
+                            <UserCategory/>
+                            <!--            <router-link :to="{name :'Home'}">Home</router-link>-->
+                            <!--            <router-link :to="{name :'ConnectionsManagement'}">ConnectionsManagement</router-link>-->
+                        </v-col>
+                        <v-col cols="9">
+                            <router-view/>
+                        </v-col>
+                    </v-row>
+                </v-container>
+            </v-main>
+        </v-app>
+    </div>
 </template>
 
 <script>
@@ -30,8 +36,19 @@
             UserInfo,
             UserCategory
         },
+        computed: {
+            currentRouteName() {
+                return this.$router.currentRoute.name
+            },
+        },
+        watch: {
+            '$router.currentRoute.name'() {
+                console.log('watch', this.$router.currentRoute.name)
+            },
+        },
         data() {
             return {
+                url: this.$router,
                 drawer: true,
                 group: null,
                 headers: [

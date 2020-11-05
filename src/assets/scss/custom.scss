@@ -42,7 +42,7 @@ hr {
   }
 }
 
-//informationForm
+//InformationForm
 .input-area{
   position: relative;
   .btn-input{
@@ -55,6 +55,37 @@ hr {
 .hash{
   .v-text-field__details{
    display: none;
+  }
+}
+
+//Login
+.login-wrap{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  .login-box{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 380px;
+    .title{
+      font-weight: bold;
+      span{
+        display: inline-block;
+        padding: 0 5px;
+        vertical-align: top;
+        background-color: #000;
+        color: #fff;
+        border-radius: 5px;
+      }
+    }
+    .form-wrap{
+      padding: 20px 30px;
+      border: 2px solid #dcdcdc;
+      border-radius: 5px;
+    }
   }
 }
 

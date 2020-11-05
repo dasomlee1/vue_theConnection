@@ -17,6 +17,7 @@
                     ></v-text-field>
                     <v-text-field
                             label="연락처"
+                            maxlength="11"
                             placeholder="연락처를 입력해주세요."
                             outlined
                     ></v-text-field>

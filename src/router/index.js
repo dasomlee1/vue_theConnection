@@ -4,11 +4,13 @@ import Home from "../views/Home";
 import ConnectionsManagement from "../views/ConnectionsManagement";
 import ShareConnections from "../views/ShareConnections";
 import InformationForm from "../views/InformationForm";
+import SignIn from "../views/SignIn";
+import SignUp from "../views/SignUp";
 
 Vue.use(VueRouter)
 
 const routes = [{
-    path: '/',
+    path: '/home',
     name: 'Home',
     component: Home
 }, {
@@ -23,6 +25,14 @@ const routes = [{
     path: '/Information-form',
     name: 'InformationForm',
     component: InformationForm
+},{
+    path: '/sign-in',
+    name: 'SignIn',
+    component: SignIn
+},{
+    path: '/sign-up',
+    name: 'SignUp',
+    component: SignUp
 }]
 
 const router = new VueRouter({
